@@ -6,7 +6,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body><canvas id="particles"></canvas>
 
     <!-- NAVBAR -->
     <nav>
@@ -19,6 +19,36 @@
         </ul>
     </nav>
 
+    <!-- AI ROBOT CHARACTER -->
+<div class="robot">
+    <div class="robot-antenna"></div>
+    <div class="robot-head">
+        <div class="robot-eyes">
+            <div class="eye" id="eyeLeft"><div class="pupil" id="pupilLeft"></div></div>
+            <div class="eye" id="eyeRight"><div class="pupil" id="pupilRight"></div></div>
+        </div>
+        <div class="robot-mouth">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+    <div class="robot-body">
+        <div class="robot-chest">
+            <div class="chest-light"></div>
+        </div>
+        <div class="robot-arms">
+            <div class="arm left-arm"></div>
+            <div class="arm right-arm"></div>
+        </div>
+    </div>
+    <div class="robot-legs">
+        <div class="leg">
+            <div class="foot"></div>
+        </div>
+        <div class="leg">
+            <div class="foot"></div>
+        </div>
+    </div>
+</div>
     <!-- HERO -->
     <section class="hero" id="home">
         <h1>Hi, I'm <span>SAHIL ANSARI</span> 👋</h1>
