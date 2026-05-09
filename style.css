@@ -535,3 +535,34 @@ body::before {
     border-radius: 4px;
     margin-bottom: -2px;
 }
+
+@media (max-width: 768px) {/* ROBOT MOBILE */
+    .robot-head {
+        width: 65px;
+        height: 58px;
+    }
+
+    .robot-body {
+        width: 55px;
+        height: 50px;
+    }
+
+    .eye {
+        width: 18px;
+        height: 18px;
+    }
+
+    .arm {
+        height: 32px;
+    }
+
+    .robot {
+        transform: scale(0.85);
+    }
+
+    /* HERO MOBILE FIX */
+    .hero {
+        padding: 20px;
+        gap: 12px;
+    }
+}
