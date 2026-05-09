@@ -233,6 +233,14 @@ nav ul li a:hover {
     margin-bottom: 32px;
 }
 
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
@@ -253,115 +261,8 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 768px) {
 
-    /* NAVBAR */
-    nav {
-        flex-direction: column;
-        padding: 16px 24px;
-        gap: 12px;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-    }
-
-    /* HERO */
-    .hero {
-        padding: 20px;
-        gap: 12px;
-    }
-
-    .hero h1 { font-size: 32px; }
-    .hero p  { font-size: 16px; }
-
-    .hero-btns {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* ROBOT */
-    .robot {
-        transform: scale(0.85);
-    }
-
-    .robot-head {
-        width: 65px;
-        height: 58px;
-    }
-
-    .robot-body {
-        width: 55px;
-        height: 50px;
-    }
-
-    .eye {
-        width: 18px;
-        height: 18px;
-    }
-
-    .arm {
-        height: 32px;
-    }
-
-    /* SECTIONS */
-    .about, .skills, .projects, .contact {
-        padding: 60px 24px;
-    }
-
-    .section-title { font-size: 28px; }
-
-    /* SKILLS */
-    .skills-grid { gap: 12px; }
-
-    .skill-card {
-        padding: 14px 20px;
-        font-size: 14px;
-    }
-
-    /* PROJECTS */
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card { padding: 24px; }
-
-    /* CONTACT */
-    .contact-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-links a,
-    .contact-links button {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* ===== SMALL PHONES ===== */
-@media (max-width: 768px) {
-
-    .hero h1 { font-size: 26px; }
-    .logo    { font-size: 20px; }
-
-    nav ul {
-        gap: 10px;
-        font-size: 13px;
-    }
-
-    .robot { transform: scale(0.75); }
-}
-/* PARTICLES BACKGROUND */
+/* ===== PARTICLES BACKGROUND ===== */
 #particles {
     position: fixed;
     top: 0;
@@ -376,7 +277,8 @@ footer {
     position: relative;
     z-index: 1;
 }
-/* STARS */
+
+/* ===== STARS ===== */
 body::before {
     content: '';
     position: fixed;
@@ -396,7 +298,9 @@ body::before {
 @keyframes twinkle {
     0%   { opacity: 0.03; }
     100% { opacity: 0.08; }
-}/* ===== AI ROBOT CHARACTER ===== */
+}
+
+/* ===== AI ROBOT CHARACTER ===== */
 .robot {
     display: flex;
     flex-direction: column;
@@ -562,10 +466,11 @@ body::before {
 .left-arm  { margin-left: -14px; animation: armLeft  2s ease-in-out infinite; }
 .right-arm { margin-right: -14px; animation: armRight 2s ease-in-out infinite; }
 
-@keyframes armLeft  {
+@keyframes armLeft {
     0%, 100% { transform: rotate(0deg); }
     50%       { transform: rotate(-20deg); }
 }
+
 @keyframes armRight {
     0%, 100% { transform: rotate(0deg); }
     50%       { transform: rotate(20deg); }
@@ -598,7 +503,48 @@ body::before {
     margin-bottom: -2px;
 }
 
-@media (max-width: 768px) {/* ROBOT MOBILE */
+/* ===== MOBILE RESPONSIVE (768px) ===== */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    nav {
+        flex-direction: column;
+        padding: 16px 24px;
+        gap: 12px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 40px 20px;
+        height: auto;
+        min-height: 100vh;
+        gap: 12px;
+    }
+
+    .hero h1 { font-size: 32px; }
+    .hero p  { font-size: 16px; }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ROBOT */
+    .robot { transform: scale(0.85); }
+
     .robot-head {
         width: 65px;
         height: 58px;
@@ -614,17 +560,64 @@ body::before {
         height: 18px;
     }
 
-    .arm {
-        height: 32px;
+    .arm { height: 32px; }
+
+    /* SECTIONS */
+    .about, .skills, .projects, .contact {
+        padding: 60px 24px;
     }
 
-    .robot {
-        transform: scale(0.85);
+    .section-title { font-size: 28px; }
+
+    /* SKILLS */
+    .skills-grid { gap: 12px; }
+
+    .skill-card {
+        padding: 14px 20px;
+        font-size: 14px;
     }
 
-    /* HERO MOBILE FIX */
-    .hero {
-        padding: 20px;
+    /* PROJECTS */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card { padding: 24px; }
+
+    /* CONTACT */
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
         gap: 12px;
+        width: 100%;
+        padding: 0 16px;
     }
+
+    .contact-links a,
+    .contact-links button {
+        width: 100%;
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+        margin: 0;
+        font-size: 14px;
+        padding: 12px 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* ===== SMALL PHONES (380px) ===== */
+@media (max-width: 380px) {
+
+    .hero h1 { font-size: 26px; }
+    .logo    { font-size: 20px; }
+
+    nav ul {
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .robot { transform: scale(0.75); }
 }
